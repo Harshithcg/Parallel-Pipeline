@@ -13,19 +13,7 @@ pipeline {
         echo "This is Test on INTERNET EXPOLRER"
       }  
     }  
-        stage ("TEST ON FIREFOX") {
-      steps {
-        echo "This is Test on FIREFOX" 
-      }  
     }
     }
-    }
-    stage ('DEPLOY') {
-      steps {
-        echo "This is Deploy stage" 
-	      echo "Mission"
-	      sh 'sleep 5'
-      }  
-    }
   }
 }
