@@ -22,6 +22,11 @@ pipeline {
            '''
       }
     }
+        stage('Test in Chrome'){
+          steps{
+            echo "Tested in Chrome"
+          }
+        }
       }
     }
   }
