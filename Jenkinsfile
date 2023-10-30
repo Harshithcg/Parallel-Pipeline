@@ -9,6 +9,8 @@ pipeline {
          DEPLOY_ENV = "$ENV"
       }
   stages {
+    stage ('Test Paralel'){
+      parallel {
     stage('BUILD') {
       steps {
         echo "Deploying to ${params.ENV}"
@@ -18,6 +20,8 @@ pipeline {
               echo Code from ${ENV} branch
               exit 0
            '''
+      }
+    }
       }
     }
   }
